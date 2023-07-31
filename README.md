@@ -2,7 +2,7 @@
 
 ## Description
 
-This application was developed for Appathon@Ntua 2020 and was proposed and accepted by the grading committee. The purpose of the application is to facilitate bus transportation and enhance the overall commuting experience through a web API. The application is built using Node.js for the intermediate server, Python for the command-line interface, and HTML/CSS for the frontend environment. 
+This application was developed for Appathon@Ntua 2020 and was proposed to and accepted by the grading committee. The purpose of the application is to facilitate bus transportation and enhance the overall commuting experience through a web API. The application is built using Node.js for the intermediate server, Python for the command-line interface, and HTML/CSS for the frontend environment. 
 
 
 ## Data and Impact
