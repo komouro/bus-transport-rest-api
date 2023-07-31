@@ -1,0 +1,111 @@
+/* Styles for the .appName class */
+.appName {
+  text-align: center; /* Aligns the text to the center */
+  margin: auto; /* Centers the element horizontally in its container */
+  border: 2px solid #FFBF00; /* Adds a 2px solid border with color #FFBF00 */
+  padding: 20px; /* Adds 20px of padding inside the element */
+  background-color: #FFBF00; /* Sets the background color to #FFBF00 */
+}
+
+/* Styles for the .Menu class */
+.Menu {
+  overflow: hidden; /* Ensures that any child elements overflowing the container are hidden */
+  background-color: #2A2B2DFF; /* Sets the background color to #2A2B2DFF */
+}
+
+/* Styles for buttons inside .Menu class */
+.Menu button {
+  float: left; /* Floats the buttons to the left */
+  display: inline-block; /* Makes the buttons display as inline blocks */
+  color: #2DA8D8FF; /* Sets the text color to #2DA8D8FF */
+  text-align: center; /* Aligns the text to the center */
+  padding: 16px 32px; /* Adds 16px top and bottom padding and 32px left and right padding */
+  font-size: 16px; /* Sets the font size to 16px */
+  margin: 2px 2px; /* Adds 2px margin on all sides */
+  text-decoration: none; /* Removes underline from links */
+  transition-duration: 0.6s; /* Sets the transition duration to 0.6 seconds for smooth effects */
+  cursor: pointer; /* Changes the cursor to a pointer on hover */
+  background-color: #2A2B2DFF; /* Sets the background color to #2A2B2DFF */
+  border: 2px solid #2DA8D8FF; /* Adds a 2px solid border with color #2DA8D8FF */
+}
+
+/* Styles for the button on hover */
+.Menu button:hover {
+  background-color: #2DA8D8FF; /* Changes the background color to #2DA8D8FF on hover */
+  color: #2A2B2DFF; /* Changes the text color to #2A2B2DFF on hover */
+}
+
+/* Styles for the .MainText class */
+.MainText {
+  float: center; /* This should be 'none', 'float' cannot have 'center' value */
+  text-align: center; /* Aligns the text to the center */
+  background-color: #181729; /* Sets the background color to #181729 */
+  padding: 10px; /* Adds 10px of padding inside the element */
+  padding-bottom: 30%; /* Adds 30% padding to the bottom (for spacing) */
+}
+
+/* Styles for the .QueryTitle class */
+.QueryTitle {
+  color: #C8FFF6; /* Sets the text color to #C8FFF6 */
+  font-size: 130%; /* Sets the font size to 130% of the default size */
+}
+
+/* Styles for the .Update_msg class */
+.Update_msg {
+  color: #C8FFF6; /* Sets the text color to #C8FFF6 */
+}
+
+/* Styles for the .Output class */
+.Output {
+  font-size: 110%; /* Sets the font size to 110% of the default size */
+}
+
+/* Styles for the .Result_msg_section class */
+.Result_msg_section {
+  color: #C8FFF6; /* Sets the text color to #C8FFF6 */
+}
+
+/* Styles for the .Source_output_section class */
+.Source_output_section {
+  color: #C8FFF6; /* Sets the text color to #C8FFF6 */
+}
+
+/* Styles for the .Destination_output_section class */
+.Destination_output_section {
+  color: #C8FFF6; /* Sets the text color to #C8FFF6 */
+}
+
+/* Styles for buttons inside .Output class */
+.Output button {
+  color: #2DA8D8FF; /* Sets the text color to #2DA8D8FF */
+  text-align: center; /* Aligns the text to the center */
+  padding: 16px 32px; /* Adds 16px top and bottom padding and 32px left and right padding */
+  font-size: 16px; /* Sets the font size to 16px */
+  margin: 2px 2px; /* Adds 2px margin on all sides */
+  text-decoration: none; /* Removes underline from links */
+  transition-duration: 0.6s; /* Sets the transition duration to 0.6 seconds for smooth effects */
+  cursor: pointer; /* Changes the cursor to a pointer on hover */
+  background-color: #2A2B2DFF; /* Sets the background color to #2A2B2DFF */
+  border: 2px solid #2DA8D8FF; /* Adds a 2px solid border with color #2DA8D8FF */
+}
+
+/* Styles for the button on hover */
+.Output button:hover {
+  background-color: #2DA8D8FF; /* Changes the background color to #2DA8D8FF on hover */
+  color: #2A2B2DFF; /* Changes the text color to #2A2B2DFF on hover */
+}
+
+/* Styles for the .Output table class */
+.Output table {
+  margin-left: 10px; /* Adds 10px margin to the left */
+  color: #2DA8D8FF; /* Sets the text color to #2DA8D8FF */
+  background-color: #2A2B2DFF; /* Sets the background color to #2A2B2DFF */
+  width: 95%; /* Sets the width to 95% of the parent container */
+  table-layout: fixed; /* Forces the table to use the fixed table layout algorithm */
+}
+
+/* Global style for the html element */
+html {
+  box-sizing: border-box; /* Makes sure that padding and border are included in the element's total width and height */
+}
+

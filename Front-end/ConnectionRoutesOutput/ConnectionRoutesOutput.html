@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <!-- Set the title of the page to "BusBrainiac" -->
+  <title>BusBrainiac</title>
+  <!-- Link the external CSS stylesheet "ConnectionRoutesOutputStyle.css" -->
+  <link rel="stylesheet" type="text/css" href="ConnectionRoutesOutputStyle.css">
+</head>
+<body>
+  <!-- Main container with the AngularJS app and controller -->
+  <div class="main" ng-app="ConnectionRoutesOutputPage" ng-controller="ConnectionRoutesOutputController">
+
+    <!-- Display the application name in the "appName" div -->
+    <div class="appName">
+      <h2>BusBrainiac</h2>
+    </div>
+
+    <!-- Navigation menu buttons for different pages -->
+    <div class="Menu">
+      <button ng-click="EnterHomePage()">Home</button>
+      <button ng-click="EnterNearestStationsPage()">Nearest Stations</button>
+      <button ng-click="EnterCommonPathPage()">Connection Routes</button>
+      <button ng-click="EnterWeatherConditionsPage()">Weather Conditions</button>
+    </div>
+
+    <!-- Main text section -->
+    <div class="MainText">
+      <!-- Title for the Query section -->
+      <div class="QueryTitle">
+        <h2> Connection Routes </h2>
+      </div>
+
+      <!-- Output section -->
+      <div class="Output">
+        <p>
+          <!-- Button to trigger data update -->
+          <button ng-click="MakeTheRequest()">Update</button>
+          <!-- Buttons to show/hide the table -->
+          <button ng-click="ShowTable()" ng-hide="LoadingTime">Show</button>
+          <button ng-click="HideTable()" ng-hide="LoadingTime">Hide</button>
+        </p>
+        <br>
+
+        <!-- Message section to display if the data was updated -->
+        <div class="Update_msg">
+          <p>
+            {{Updated}}
+          </p>
+        </div>
+
+        <!-- Message section to display the result -->
+        <div ng-hide="hidden_flag_msg" class="Result_msg_section">
+          <p>
+            {{Result_msg}}
+          </p>
+          <br>
+          <br>
+        </div>
+
+        <!-- Best route section -->
+        <div ng-hide="hidden_flag_best" class="Best_route_section">
+          <p>
+            Best Route
+            <br>
+            <!-- Table to display the best route information -->
+            <table border=1>
+              <thead>
+                <tr>
+                  <th>Path length</th>
+                  <th>Path by Station ID</th>
+                  <th>Path by Name</th>
+                  <th>Path by Coordinates</th>
+                </tr>
+              </thead>
+              <tr>
+                <!-- Display data for the best route -->
+                <td ng-repeat="v_A in result_best">{{v_A}}</td>
+              </tr>
+            </table>
+          </p>
+          <br>
+          <br>
+        </div>
+
+        <!-- Alternative routes section -->
+        <div ng-hide="hidden_flag_alternative" class="Alternative_routes_section">
+          <p>
+            Alternative Routes
+            <br>
+            <!-- Table to display alternative routes information -->
+            <table border=1>
+              <thead>
+                <tr>
+                  <th>Path by Station ID </th>
+                  <th>Path by Name </th>
+                  <th>Path by Coordinates </th>
+                </tr>
+              </thead>
+              <tr ng-repeat="item_B in result_alternative">
+                <!-- Display data for each alternative route -->
+                <td ng-repeat="v_B in item_B">{{v_B}}</td>
+              </tr>
+            </table>
+          </p>
+          <br>
+          <br>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Include AngularJS and jQuery libraries from Google CDN -->
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <!-- Include the custom JavaScript file "ConnectionRoutesOutputScript.js" -->
+  <script src="ConnectionRoutesOutputScript.js"></script>
+
+</body>
+</html>
+

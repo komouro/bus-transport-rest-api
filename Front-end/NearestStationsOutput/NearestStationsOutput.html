@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>BusBrainiac</title>
+  <!-- Link to the CSS file for styling this page -->
+  <link rel="stylesheet" type="text/css" href="NearestStationsOutputStyle.css">
+</head>
+<body>
+  <div class="main" ng-app="NearestStationsOutputPage" ng-controller="NearestStationsOutputController">
+    <!-- Application name section -->
+    <div class="appName">
+      <h2>BusBrainiac</h2>
+    </div>
+    <!-- Menu section -->
+    <div class="Menu">
+      <!-- Buttons for navigation -->
+      <button ng-click="EnterHomePage()">Home</button>
+      <button ng-click="EnterNearestStationsPage()">Nearest Stations</button>
+      <button ng-click="EnterCommonPathPage()">Connection Routes</button>
+      <button ng-click="EnterWeatherConditionsPage()">Weather Conditions</button>
+    </div>
+    <!-- Main text section -->
+    <div class="MainText">
+      <!-- Query title section -->
+      <div class="QueryTitle">
+        <h2> Nearest Stations </h2>
+      </div>
+      <div class="Output">
+        <!-- Buttons for updating and showing/hiding the table -->
+        <p>
+          <button ng-click="MakeTheRequest()">Update</button>
+          <button ng-click="ShowTable()" ng-hide="LoadingTime">Show</button>
+          <button ng-click="HideTable()" ng-hide="LoadingTime">Hide</button>
+        </p>
+        <br>
+        <!-- Message to show when the information is updated -->
+        <div class="Update_msg">
+          <p>
+            {{Updated}}
+          </p>
+        </div>
+        <!-- Table displaying the nearest stations -->
+        <table ng-hide="hidden_flag" border=1>
+          <thead>
+            <tr>
+              <!-- Table headers -->
+              <th>Station ID</th>
+              <th>Station Name</th>
+              <th>Station Lat</th>
+              <th>Station Lon</th>
+            </tr>
+          </thead>
+          <tr ng-repeat="item in result track by $index">
+            <td ng-repeat="v in item track by $index">{{v}}</td>
+          </tr>
+        </table>
+      </div>
+    </div>
+  </div>
+
+  <!-- Include AngularJS and jQuery libraries -->
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <!-- Include the script file for handling the logic of this page -->
+  <script src="NearestStationsOutputScript.js"></script>
+
+</body>
+</html>
+

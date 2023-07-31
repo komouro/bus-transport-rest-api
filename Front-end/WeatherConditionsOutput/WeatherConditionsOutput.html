@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>BusBrainiac</title>
+  <!-- Link to the CSS file for styling this page -->
+  <link rel="stylesheet" type="text/css" href="WeatherConditionsOutputStyle.css">
+</head>
+<body>
+  <div class="main" ng-app="WeatherConditionsOutputPage" ng-controller="WeatherConditionsOutputController">
+    <!-- Application name section -->
+    <div class="appName">
+      <h2>BusBrainiac</h2>
+    </div>
+    <!-- Menu section -->
+    <div class="Menu">
+      <!-- Buttons for navigation -->
+      <button ng-click="EnterHomePage()">Home</button>
+      <button ng-click="EnterNearestStationsPage()">Nearest Stations</button>
+      <button ng-click="EnterCommonPathPage()">Connection Routes</button>
+      <button ng-click="EnterWeatherConditionsPage()">Weather Conditions</button>
+    </div>
+    <!-- Main text section -->
+    <div class="MainText">
+      <!-- Query title section -->
+      <div class="QueryTitle">
+        <!-- Title of the current query result -->
+        <h2> Weather Conditions </h2>
+      </div>
+      <!-- Output section -->
+      <div class="Output">
+        <!-- Buttons for updating, showing, and hiding the result table -->
+        <p>
+          <button ng-click="MakeTheRequest()">Update</button>
+          <button ng-click="ShowTable()" ng-hide="LoadingTime">Show</button>
+          <button ng-click="HideTable()" ng-hide="LoadingTime">Hide</button>
+        </p>
+        <br>
+        <!-- Update message section -->
+        <div class="Update_msg">
+          <!-- Message to display when the information is updated -->
+          <p>
+            {{Updated}}
+          </p>
+        </div>
+        <!-- Result message section -->
+        <div ng-hide="hidden_flag_msg" class="Result_msg_section">
+          <!-- Message to display the result of the query -->
+          <p>
+            {{Result_msg}}
+          </p>
+          <br>
+          <br>
+        </div>
+        <!-- Source output section -->
+        <div ng-hide="hidden_flag_src" class="Source_output_section">
+          <!-- Table to display no raining stations -->
+          <p>
+            No raining stations
+            <br>
+            <table border=1>
+              <thead>
+                <!-- Table headers for source information -->
+                <tr>
+                  <th>Source ID</th>
+                  <th>Source Name</th>
+                  <th>Source Coordinates</th>
+                  <th>Bus Lines</th>
+                  <th>Explanation</th>
+                </tr>
+              </thead>
+              <!-- Rows for displaying each source station's information -->
+              <tr ng-repeat="item_A in result_src">
+                <td ng-repeat="v_A in item_A">{{v_A}}</td>
+              </tr>
+          </table>
+          </p>
+          <br>
+          <br>
+        </div>
+        <!-- Destination output section -->
+        <div ng-hide="hidden_flag_dst" class="Destination_output_section">
+          <!-- Table to display reachable destinations -->
+          <p>
+            Reachable Destinations
+            <br>
+            <table border=1>
+              <thead>
+                <!-- Table headers for destination information -->
+                <tr>
+                  <th>Destination ID</th>
+                  <th>Destination Name</th>
+                  <th>Destination Coordinates</th>
+                  <th>Bus Lines</th>
+                  <th>Explanation</th>
+                </tr>
+              </thead>
+              <!-- Rows for displaying each destination station's information -->
+              <tr ng-repeat="item_B in result_dst">
+                <td ng-repeat="v_B in item_B">{{v_B}}</td>
+              </tr>
+          </table>
+          </p>
+          <br>
+          <br>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Include AngularJS and jQuery libraries -->
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <!-- Include the script file for handling the logic of this page -->
+  <script src="WeatherConditionsOutputScript.js"></script>
+
+</body>
+</html>
+

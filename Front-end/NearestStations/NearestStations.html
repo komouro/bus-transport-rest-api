@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>BusBrainiac</title>
+  <!-- Linking the CSS file for styling -->
+  <link rel="stylesheet" type="text/css" href="NearestStationsStyle.css">
+</head>
+<body>
+  <!-- Main container for the page -->
+  <div class="main" ng-app="NearestStationsPage" ng-controller="NearestStationsController">
+    <!-- App name section -->
+    <div class="appName">
+      <h2>BusBrainiac</h2>
+    </div>
+    <!-- Navigation menu -->
+    <div class="Menu">
+      <button ng-click="EnterHomePage()">Home</button>
+      <button ng-click="EnterNearestStationsPage()">Nearest Stations</button>
+      <button ng-click="EnterCommonPathPage()">Connection Routes</button>
+      <button ng-click="EnterWeatherConditionsPage()">Weather Conditions</button>
+    </div>
+    <!-- Main content section -->
+    <div class="MainText">
+      <!-- Description of the page -->
+      <div class="Description">
+        <h2>Nearest Stations</h2>
+        <h3>Find the closest stations from a given location.</h3>
+        <br>
+        <h4>
+          You need to specify the coordinates of the location (lat, lon),
+          the number of the stations you are interested in (counter)
+          and the source of the information which can be provided either via local datasets or web service (service type).
+        </h4>
+      </div>
+      <!-- Input fields section -->
+      <div class="InputSlots">
+        <p>Lat: <input type="number" step="0.0000001" min="-90" max="90" placeholder="(ex. 40.6345)" ng-model="lat" required></p>
+        <p>Lon: <input type="number" step="0.0000001" min="-180" max="180" placeholder="(ex. 22.3902)" ng-model="lon" required></p>
+        <p>Counter: <input type="number" min="0" placeholder="(ex. 6)" ng-model="num" required></p>
+        <p>Service type: <select ng-options="x for x in service_options" ng-model="service" required></select></p>
+        <br>
+        <!-- Buttons for user interaction -->
+        <div class="Lastbuttons">
+          <p>
+            <!-- Button to clear input fields -->
+            <button ng-click="ClearSlots()">Reset</button>
+            <!-- Button to trigger the submission of data -->
+            <button ng-click="SubmissionReady()">Submit</button>
+          </p>
+        </div>
+        <br>
+        <br>
+      </div>
+    </div>
+  </div>
+
+  <!-- Importing necessary JavaScript libraries and scripts -->
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="NearestStationsScript.js"></script>
+
+</body>
+</html>
+

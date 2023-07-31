@@ -1,0 +1,115 @@
+/* Styling for the app name section */
+.appName {
+  text-align: center;
+  margin: auto;
+  border: 2px solid #FFBF00;
+  padding: 20px;
+  background-color: #FFBF00;
+}
+
+/* Styling for the navigation menu */
+.Menu {
+  overflow: hidden;
+  background-color: #2A2B2DFF;
+}
+
+/* Styling for buttons in the navigation menu */
+.Menu button {
+  float: left;
+  display: inline-block;
+  color: #2DA8D8FF;
+  text-align: center;
+  padding: 16px 32px;
+  font-size: 16px;
+  margin: 2px 2px;
+  text-decoration: none;
+  transition-duration: 0.6s;
+  cursor: pointer;
+  background-color: #2A2B2DFF;
+  border: 2px solid #2DA8D8FF;
+}
+
+/* Styling for the hover effect on buttons in the navigation menu */
+.Menu button:hover {
+  background-color: #2DA8D8FF;
+  color: #2A2B2DFF;
+}
+
+/* Styling for the main content section */
+.MainText {
+  float: center;
+  text-align: center;
+  background-color: #181729;
+  padding: 10px;
+  padding-bottom: 30%;
+}
+
+/* Styling for the query title */
+.QueryTitle {
+  color: #C8FFF6;
+  font-size: 130%;
+}
+
+/* Styling for the update message */
+.Update_msg {
+  color: #C8FFF6;
+}
+
+/* Styling for the output section */
+.Output {
+  font-size: 130%;
+}
+
+/* Styling for the result message section */
+.Result_msg_section {
+  color: #C8FFF6;
+}
+
+/* Styling for the best route section */
+.Best_route_section {
+  color: #C8FFF6;
+}
+
+/* Styling for the alternative routes section */
+.Alternative_routes_section {
+  color: #C8FFF6;
+}
+
+/* Styling for buttons in the output section */
+.Output button {
+  color: #2DA8D8FF;
+  text-align: center;
+  padding: 16px 32px;
+  font-size: 16px;
+  margin: 2px 2px;
+  text-decoration: none;
+  transition-duration: 0.6s;
+  cursor: pointer;
+  background-color: #2A2B2DFF;
+  border: 2px solid #2DA8D8FF;
+}
+
+/* Styling for the hover effect on buttons in the output section */
+.Output button:hover {
+  background-color: #2DA8D8FF;
+  color: #2A2B2DFF;
+}
+
+/* Styling for the table in the output section */
+.Output table {
+  /*
+  color: #2A2B2DFF;
+  background-color: #C8FFF6;
+  */
+  margin-left: 10px;
+  color: #2DA8D8FF;
+  background-color: #2A2B2DFF;
+  width: 95%;
+  table-layout: fixed;
+}
+
+/* Global styling for the entire page */
+html {
+  box-sizing: border-box;
+}
+

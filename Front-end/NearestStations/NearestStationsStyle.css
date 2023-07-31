@@ -1,0 +1,94 @@
+/* Styles for the application name section */
+.appName {
+  text-align: center;
+  margin: auto;
+  border: 2px solid #FFBF00;
+  padding: 20px;
+  background-color: #FFBF00;
+}
+
+/* Styles for the menu section */
+.Menu {
+  overflow: hidden;
+  background-color: #2A2B2DFF;
+}
+
+/* Styles for buttons inside the menu */
+.Menu button {
+  float: left;
+  display: inline-block;
+  color: #2DA8D8FF;
+  text-align: center;
+  padding: 16px 32px;
+  font-size: 16px;
+  margin: 2px 2px;
+  text-decoration: none;
+  transition-duration: 0.6s;
+  cursor: pointer;
+  background-color: #2A2B2DFF;
+  border: 2px solid #2DA8D8FF;
+}
+
+/* Styles for button hover effect inside the menu */
+.Menu button:hover {
+  background-color: #2DA8D8FF;
+  color: #2A2B2DFF;
+}
+
+/* Styles for the main text section */
+.MainText {
+  content: "";
+  display: table;
+  clear: both;
+  text-align: center;
+  background-image: url(../Background_images/background_img_second.png);
+  background-size: cover;
+  padding-top: 40px;
+  padding-bottom: 50%;
+}
+
+/* Styles for the description section */
+.Description {
+  float: left;
+  width: 45%;
+  padding: 20px;
+  color: #C8FFF6;
+  font-size: 120%;
+}
+
+/* Styles for the input slots section */
+.InputSlots {
+  float: left;
+  width: 45%;
+  padding: 20px;
+  font-size: 120%;
+  border: 2px solid #2DA8D8FF;
+  background-color: #FFBF00;
+}
+
+/* Styles for buttons inside the last buttons section */
+.Lastbuttons button {
+  display: inline-block;
+  color: #2DA8D8FF;
+  text-align: center;
+  padding: 10px 16px;
+  font-size: 13px;
+  margin: 4px 4px;
+  transition-duration: 0.4s;
+  text-decoration: none;
+  cursor: pointer;
+  background-color: #2A2B2DFF;
+  border: 2px solid #2DA8D8FF;
+}
+
+/* Styles for button hover effect inside the last buttons section */
+.Lastbuttons button:hover {
+  background-color: #2DA8D8FF;
+  color: #2A2B2DFF;
+}
+
+/* Global styles applied to the entire HTML document */
+html {
+  box-sizing: border-box;
+}
+

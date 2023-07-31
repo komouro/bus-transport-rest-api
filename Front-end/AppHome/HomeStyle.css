@@ -1,0 +1,68 @@
+/* Styles for the element with class "appName" */
+.appName {
+  text-align: center; /* Center align the text */
+  margin: auto; /* Center the element horizontally */
+  border: 2px solid #FFBF00; /* Add a 2px solid border with color #FFBF00 (yellow) */
+  padding: 80px; /* Add 80px padding around the content */
+  background-color: #FFBF00; /* Set the background color to #FFBF00 (yellow) */
+  font-size: 200%; /* Set the font size to 200% of the parent font size */
+}
+
+/* Styles for the element with class "credits" */
+.credits {
+  text-align: right; /* Right align the text */
+  margin: auto; /* Center the element horizontally */
+  border: 2px solid #FFBF00; /* Add a 2px solid border with color #FFBF00 (yellow) */
+  padding: 10px; /* Add 10px padding around the content */
+  background-color: #FFBF00; /* Set the background color to #FFBF00 (yellow) */
+  font-family: Monospace; /* Use the Monospace font family */
+}
+
+/* Styles for the element with class "Menu" */
+.Menu {
+  overflow: hidden; /* Hide any content that overflows the container */
+  background-color: #2A2B2DFF; /* Set the background color to #2A2B2DFF (dark gray) */
+}
+
+/* Styles for buttons inside the element with class "Menu" */
+.Menu button {
+  float: left; /* Float the buttons to the left */
+  display: inline-block; /* Display buttons as inline-block elements */
+  color: #2DA8D8FF; /* Set the text color to #2DA8D8FF (light blue) */
+  text-align: center; /* Center align the text */
+  padding: 16px 32px; /* Add 16px top and bottom padding, and 32px left and right padding */
+  font-size: 16px; /* Set the font size to 16px */
+  margin: 2px 2px; /* Add 2px margin on all sides */
+  text-decoration: none; /* Remove underline from the links */
+  transition-duration: 0.6s; /* Set the duration of the transition to 0.6 seconds */
+  cursor: pointer; /* Set the cursor to a pointer (hand) */
+  background-color: #2A2B2DFF; /* Set the background color to #2A2B2DFF (dark gray) */
+  border: 2px solid #2DA8D8FF; /* Add a 2px solid border with color #2DA8D8FF (light blue) */
+}
+
+/* Styles for the buttons on hover */
+.Menu button:hover {
+  background-color: #2DA8D8FF; /* Change the background color to #2DA8D8FF (light blue) on hover */
+  color: #2A2B2DFF; /* Change the text color to #2A2B2DFF (dark gray) on hover */
+}
+
+/* Styles for the element with class "MainText" */
+.MainText {
+  text-align: center; /* Center align the text */
+  padding-bottom: 600px; /* Add 600px padding at the bottom */
+  padding-top: 20px; /* Add 20px padding at the top */
+  background-image: url(../Background_images/background_img_first.png); /* Set a background image */
+  background-size: cover; /* Scale the background image to cover the entire container */
+}
+
+/* Styles for the <h4> elements inside the element with class "MainText" */
+.MainText h4 {
+  color: #C8FFF6; /* Set the text color to #C8FFF6 (light cyan) */
+  font-size: 140%; /* Set the font size to 140% of the parent font size */
+}
+
+/* Global CSS rules applied to the <html> element */
+html {
+  box-sizing: border-box; /* Set the box-sizing property to "border-box" for all HTML elements */
+}
+

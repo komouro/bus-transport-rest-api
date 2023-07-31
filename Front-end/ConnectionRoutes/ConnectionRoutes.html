@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <!-- Set the title of the page to "BusBrainiac" -->
+  <title>BusBrainiac</title>
+  <!-- Link the external CSS stylesheet "ConnectionRoutesStyle.css" -->
+  <link rel="stylesheet" type="text/css" href="ConnectionRoutesStyle.css">
+</head>
+<body>
+  <!-- Main container with the AngularJS app and controller -->
+  <div class="main" ng-app="ConnectionRoutesPage" ng-controller="ConnectionRoutesController">
+
+    <!-- Display the application name in the "appName" div -->
+    <div class="appName">
+      <h2>BusBrainiac</h2>
+    </div>
+
+    <!-- Navigation menu buttons for different pages -->
+    <div class="Menu">
+      <button ng-click="EnterHomePage()">Home</button>
+      <button ng-click="EnterNearestStationsPage()">Nearest Stations</button>
+      <button ng-click="EnterCommonPathPage()">Connection Routes</button>
+      <button ng-click="EnterWeatherConditionsPage()">Weather Conditions</button>
+    </div>
+
+    <!-- Main text section explaining the purpose of the page -->
+    <div class="MainText">
+      <!-- Description of the "Connection Routes" feature -->
+      <div class="Description">
+        <h2>Connection Routes</h2>
+        <h3>Find the routes that connect two stations that are near two given locations.</h3>
+        <br>
+        <h4>
+          You need to specify the coordinates of the origin (lat source, lon source),
+          the coordinates of the destination (lat destination, lon destination),
+          the number of the routes you are interested in (counter),
+          and the source of the information which can be provided either via local datasets or web service (service type).
+        </h4>
+      </div>
+
+      <!-- Input slots for user input -->
+      <div class="InputSlots">
+        <p>Lat (source): <input type="number" step="0.0000001" min="-90" max="90" placeholder="(ex. 40.6345)" ng-model="lat_src" required></p>
+        <p>Lon (source): <input type="number" step="0.0000001" min="-180" max="180" placeholder="(ex. 22.3902)" ng-model="lon_src" required></p>
+        <p>Lat (destination): <input type="number" step="0.0000001" min="-90" max="90" placeholder="(ex. 40.6345)" ng-model="lat_dst" required></p>
+        <p>Lon (destination): <input type="number" step="0.0000001" min="-180" max="180" placeholder="(ex. 22.3902)" ng-model="lon_dst" required></p>
+        <p>Counter: <input type="number" min="0" placeholder="(ex. 6)" ng-model="num" required></p>
+        <p>Service type: <select ng-options="x for x in service_options" ng-model="service"></select></p>
+        <br>
+        <div class="Lastbuttons">
+          <p>
+            <!-- Buttons to reset and submit the form -->
+            <button ng-click="ClearSlots()">Reset</button>
+            <button ng-click="MakeTheRequest()">Sumbit</button>
+          </p>
+        </div>
+        <br>
+        <br>
+      </div>
+    </div>
+  </div>
+
+  <!-- Include AngularJS and jQuery libraries from Google CDN -->
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <!-- Include the custom JavaScript file "ConnectionRoutesScript.js" -->
+  <script src="ConnectionRoutesScript.js"></script>
+
+</body>
+</html>
+

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <!-- Set the character encoding for the document to UTF-8 -->
+  <meta charset="UTF-8">
+
+  <!-- Set the title of the page to "BusBrainiac" -->
+  <title>BusBrainiac</title>
+
+  <!-- Link the external CSS stylesheet "HomeStyle.css" -->
+  <link rel="stylesheet" type="text/css" href="HomeStyle.css">
+</head>
+<body>
+  <!-- Main container with the AngularJS app and controller -->
+  <div class="main" ng-app="HomePage" ng-controller="HomeController">
+
+    <!-- Display the application name in the "appName" div -->
+    <div class="appName">
+      <h1>BusBrainiac</h1>
+    </div>
+
+    <!-- Show the credits for the app -->
+    <div class="credits">
+      <h3>created by Konstantinos Mourogiannis</h3>
+      <h3>for APPATHON@NTUA 2020</h3>
+    </div>
+
+    <!-- Navigation menu buttons for different pages -->
+    <div class="Menu">
+      <button ng-click="EnterHomePage()">Home</button>
+      <button ng-click="EnterNearestStationsPage()">Nearest Stations</button>
+      <button ng-click="EnterCommonPathPage()">Connection Routes</button>
+      <button ng-click="EnterWeatherConditionsPage()">Weather Conditions</button>
+    </div>
+
+    <!-- Main text section explaining the purpose of the app -->
+    <div class="MainText">
+      <h4>
+        Information about bus stations and bus lines is provided.
+        <br>
+        Find your nearest stations, choose one of the different routes to get to your destination and learn about the stations
+        where it is not raining.
+      </h4>
+    </div>
+  </div>
+
+  <!-- Include AngularJS library from Google CDN -->
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+
+  <!-- Include the custom JavaScript file "HomeScript.js" -->
+  <script src="HomeScript.js"></script>
+</body>
+</html>
+

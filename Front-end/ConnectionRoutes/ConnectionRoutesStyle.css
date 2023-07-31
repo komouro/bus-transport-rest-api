@@ -1,0 +1,97 @@
+/* Styles for the element with class "appName" */
+.appName {
+  text-align: center; /* Center align the text */
+  margin: auto; /* Center the element horizontally */
+  border: 2px solid #FFBF00; /* Add a 2px solid border with color #FFBF00 (yellow) */
+  padding: 20px; /* Add 20px padding around the content */
+  background-color: #FFBF00; /* Set the background color to #FFBF00 (yellow) */
+}
+
+/* Styles for the element with class "Menu" */
+.Menu {
+  overflow: hidden; /* Hide any content that overflows the container */
+  background-color: #2A2B2DFF; /* Set the background color to #2A2B2DFF (dark gray) */
+}
+
+/* Styles for buttons inside the element with class "Menu" */
+.Menu button {
+  float: left; /* Float the buttons to the left */
+  display: inline-block; /* Display buttons as inline-block elements */
+  color: #2DA8D8FF; /* Set the text color to #2DA8D8FF (light blue) */
+  text-align: center; /* Center align the text */
+  padding: 16px 32px; /* Add 16px top and bottom padding, and 32px left and right padding */
+  font-size: 16px; /* Set the font size to 16px */
+  margin: 2px 2px; /* Add 2px margin on all sides */
+  text-decoration: none; /* Remove underline from the links */
+  transition-duration: 0.6s; /* Set the duration of the transition to 0.6 seconds */
+  cursor: pointer; /* Set the cursor to a pointer (hand) */
+  background-color: #2A2B2DFF; /* Set the background color to #2A2B2DFF (dark gray) */
+  border: 2px solid #2DA8D8FF; /* Add a 2px solid border with color #2DA8D8FF (light blue) */
+}
+
+/* Styles for the buttons on hover */
+.Menu button:hover {
+  background-color: #2DA8D8FF; /* Change the background color to #2DA8D8FF (light blue) on hover */
+  color: #2A2B2DFF; /* Change the text color to #2A2B2DFF (dark gray) on hover */
+}
+
+/* 
+   Styles for the element with class "MainText". 
+   Note: Some comments have been removed as the styles are not applicable.
+*/
+.MainText {
+  content: ""; /* Create an anonymous box for clearing floats */
+  display: table; /* Display as a table to clear the floats */
+  clear: both; /* Clear floats on both sides */
+  text-align: center; /* Center align the text */
+  background-image: url(../Background_images/background_img_second.png); /* Set a background image */
+  background-size: cover; /* Scale the background image to cover the entire container */
+  padding-top: 40px; /* Add 40px padding at the top */
+  padding-bottom: 50%; /* Add 50% padding at the bottom */
+}
+
+/* Styles for the element with class "Description" */
+.Description {
+  float: left; /* Float the element to the left */
+  width: 45%; /* Set the width to 45% of the parent container */
+  padding: 20px; /* Add 20px padding around the content */
+  color: #C8FFF6; /* Set the text color to #C8FFF6 (light cyan) */
+  font-size: 120%; /* Set the font size to 120% of the parent font size */
+}
+
+/* Styles for the element with class "InputSlots" */
+.InputSlots {
+  float: left; /* Float the element to the left */
+  width: 45%; /* Set the width to 45% of the parent container */
+  padding: 20px; /* Add 20px padding around the content */
+  font-size: 120%; /* Set the font size to 120% of the parent font size */
+  border: 2px solid #2DA8D8FF; /* Add a 2px solid border with color #2DA8D8FF (light blue) */
+  background-color: #FFBF00; /* Set the background color to #FFBF00 (yellow) */
+}
+
+/* Styles for the buttons inside the element with class "Lastbuttons" */
+.Lastbuttons button {
+  display: inline-block; /* Display buttons as inline-block elements */
+  color: #2DA8D8FF; /* Set the text color to #2DA8D8FF (light blue) */
+  text-align: center; /* Center align the text */
+  padding: 10px 16px; /* Add 10px top and bottom padding, and 16px left and right padding */
+  font-size: 13px; /* Set the font size to 13px */
+  margin: 4px 4px; /* Add 4px margin on all sides */
+  transition-duration: 0.4s; /* Set the duration of the transition to 0.4 seconds */
+  text-decoration: none; /* Remove underline from the links */
+  cursor: pointer; /* Set the cursor to a pointer (hand) */
+  background-color: #2A2B2DFF; /* Set the background color to #2A2B2DFF (dark gray) */
+  border: 2px solid #2DA8D8FF; /* Add a 2px solid border with color #2DA8D8FF (light blue) */
+}
+
+/* Styles for the buttons inside the element with class "Lastbuttons" on hover */
+.Lastbuttons button:hover {
+  background-color: #2DA8D8FF; /* Change the background color to #2DA8D8FF (light blue) on hover */
+  color: #2A2B2DFF; /* Change the text color to #2A2B2DFF (dark gray) on hover */
+}
+
+/* Global CSS rules applied to the <html> element */
+html {
+  box-sizing: border-box; /* Set the box-sizing property to "border-box" for all HTML elements */
+}
+

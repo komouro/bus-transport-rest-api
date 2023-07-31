@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>BusBrainiac</title>
+  <!-- Link to the CSS file for styling this page -->
+  <link rel="stylesheet" type="text/css" href="WeatherConditionsStyle.css">
+</head>
+<body>
+  <div class="main" ng-app="WeatherConditionsPage" ng-controller="WeatherConditionsController">
+    <!-- Application name section -->
+    <div class="appName">
+      <h2>BusBrainiac</h2>
+    </div>
+    <!-- Menu section -->
+    <div class="Menu">
+      <!-- Buttons for navigation -->
+      <button ng-click="EnterHomePage()">Home</button>
+      <button ng-click="EnterNearestStationsPage()">Nearest Stations</button>
+      <button ng-click="EnterCommonPathPage()">Connection Routes</button>
+      <button ng-click="EnterWeatherConditionsPage()">Weather Conditions</button>
+    </div>
+    <!-- Main text section -->
+    <div class="MainText">
+      <!-- Description section -->
+      <div class="Description">
+        <!-- Title and explanation of the feature -->
+        <h2>Weather Conditions</h2>
+        <h3>Find the bus lines that have a source-station with no raining conditions.</h3>
+        <br>
+        <h4>
+          <!-- Explanation of how the feature works -->
+          You need to specify the type of station you are interested in (station type) and the source of the information (service type). 
+          If the option "source" is chosen, the server returns the stations where it is not raining, 
+          along with the bus lines that can be used from these stations.
+          If the option "destination" is chosen, the server returns the stations that are reachable 
+          from points where it is not raining, along with the bus lines that can be used to access these stations.
+        </h4>
+      </div>
+      <!-- Input form section -->
+      <div class="InputSlots">
+        <!-- Dropdown to select the station type -->
+        <p>Station type: <select ng-options="y for y in station_options" ng-model="stationtype"></select></p>
+        <!-- Dropdown to select the service type -->
+        <p>Service type: <select ng-options="x for x in service_options" ng-model="service"></select></p>
+        <br>
+        <!-- Buttons for resetting and submitting the form -->
+        <div class="Lastbuttons">
+          <p>
+            <button ng-click="ClearSlots()">Reset</button>
+            <button ng-click="MakeTheRequest()">Sumbit</button>
+          </p>
+        </div>
+        <br>
+        <br>
+      </div>
+    </div>
+  </div>
+
+  <!-- Include AngularJS and jQuery libraries -->
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <!-- Include the script file for handling the logic of this page -->
+  <script src="WeatherConditionsScript.js"></script>
+
+</body>
+</html>
+
