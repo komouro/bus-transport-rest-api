@@ -18,7 +18,7 @@ The impact of our application is remarkable, offering users enhanced accessibili
 
 1. **NearestStations**: Given specific coordinates, the application returns the closest *m* bus stations to that location, where *m* is specified by the user.
 
-2. **ConnectionRoutes**: By specifying the coordinates of a source location and a destination, the application determines the closest bus station to the source (S<sub>i</sub>) and the closest bus station to the destination (S<sub>j</sub>). It then provides at most *k* routes (if available) to travel from S<sub>i</sub> to S<sub>j</sub>, including intermediate stops S<sub>1</sub>, S<sub>2</sub>, ..., S<sub>j</sub>. The user also receives the bus route with the minimum number of stops. The parameter *k* is specified by the user.
+2. **ConnectionRoutes**: By specifying the coordinates of a source location and a destination, the application determines the closest bus station to the source (S<sub>i</sub>) and the closest bus station to the destination (S<sub>j</sub>). It then provides at most *k* routes (if available) to travel from S<sub>i</sub> to S<sub>j</sub>, including intermediate stops S<sub>1</sub>, S<sub>2</sub>, ..., S<sub>n</sub>. The user also receives the bus route with the minimum number of stops. The parameter *k* is specified by the user.
 
 3. **WeatherConditions**: Users can access information about bus stations where it is not currently raining. Additionally, they can find stations accessible through bus lines that include source stations where it is not currently raining.
 
