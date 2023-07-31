@@ -41,7 +41,7 @@ The development of the applcation was done using the Node Package Manager (npm).
    npm install
    ```
 
-To activate the server, run the following command in the same terminal:
+To activate the server on port 8765, run the following command in the same terminal:
 
 ```
 npm run dev
